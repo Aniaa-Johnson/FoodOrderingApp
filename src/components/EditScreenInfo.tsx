@@ -1,19 +1,31 @@
+// Importing React library for JSX syntax
 import React from 'react';
+// Importing StyleSheet for styling
 import { StyleSheet } from 'react-native';
-
+// Importing ExternalLink component
 import { ExternalLink } from './ExternalLink';
+// Importing MonoText component
 import { MonoText } from './StyledText';
+// Importing Text and View components from Themed
 import { Text, View } from './Themed';
 
+// Importing Colors from constants
 import Colors from '@/constants/Colors';
 
+// Functional component definition with path prop
 export default function EditScreenInfo({ path }: { path: string }) {
+  // Return JSX for rendering
   return (
+   // Top-level View component
     <View>
+      //nested View with styles.getStartedContainer
       <View style={styles.getStartedContainer}>
         <Text
+          // Styling for the Text component
           style={styles.getStartedText}
+          // Light color for light theme
           lightColor="rgba(0,0,0,0.8)"
+          //Dark color for dark theme
           darkColor="rgba(255,255,255,0.8)">
           Open up the code for this screen:
         </Text>
@@ -46,32 +58,53 @@ export default function EditScreenInfo({ path }: { path: string }) {
   );
 }
 
+// StyleSheet for defining component styles
 const styles = StyleSheet.create({
+  // Style for the container View
   getStartedContainer: {
+    // Center align items horizontally
     alignItems: 'center',
+    // Apply horizontal margin
     marginHorizontal: 50,
   },
+  // Style for filename View
   homeScreenFilename: {
+    // Apply vertical margin
     marginVertical: 7,
   },
+  // Style for code highlight container View
   codeHighlightContainer: {
+    // Apply border radius
     borderRadius: 3,
+    // Apply horizontal padding
     paddingHorizontal: 4,
   },
+  // Style for get started text
   getStartedText: {
+    // Set font size
     fontSize: 17,
+    // Set line height
     lineHeight: 24,
+    // Center align text
     textAlign: 'center',
   },
+  // Style for help container View
   helpContainer: {
+    // Apply top margin
     marginTop: 15,
+    // Apply horizontal margin
     marginHorizontal: 20,
+    // Center align items horizontally
     alignItems: 'center',
   },
+  // Style for help link
   helpLink: {
+    // Apply vertical padding
     paddingVertical: 15,
   },
+  // Style for help link text
   helpLinkText: {
+    // Center align text
     textAlign: 'center',
   },
 });
